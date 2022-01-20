@@ -1,0 +1,12 @@
+set1 = input("input any sentence or press enter for demonstration\n>>>")  # sentence to modify
+
+if set1 == "":
+    set1 = "This is a demonstration of the code"
+
+
+def generate_link(x):  # turn words into parameters
+    return "{{Link if exists|" + str(x) + "}}"
+
+
+for item in (set1.split(" ")):  # gets output for each word
+    print(generate_link(item))
